@@ -1,5 +1,5 @@
-import { NearestFilter, TextureLoader } from "three"
-import { ObjectDynamicI } from "../hooks/hook.interface"
+import { NearestFilter, RepeatWrapping, TextureLoader } from "three"
+import { ObjectDynamicI } from "../interfaces/common/global.interface"
 
 import { dirtImg, glassImg, grassImg, logImg, woodImg } from "./images"
 
@@ -15,7 +15,10 @@ glassTexture.magFilter = NearestFilter
 grassTexture.magFilter = NearestFilter
 logTexture.magFilter = NearestFilter
 woodTexture.magFilter = NearestFilter
+
 groundTexture.magFilter = NearestFilter
+groundTexture.wrapS = RepeatWrapping
+groundTexture.wrapT = RepeatWrapping
 
 const textures: ObjectDynamicI = {
     dirtTexture,

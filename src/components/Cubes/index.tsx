@@ -1,17 +1,16 @@
 import React from "react"
 import { useStore } from "../../hooks/useStore"
 import { Box } from "./Box"
-import { CubeI } from "./cube.interface"
 
 export function Cubes(){
-    const [cubes] = useStore((state: any) => [
+    const [cubes] = useStore((state) => [
         state.cubes
     ])
     
 
     return (
         <React.Fragment>
-            {cubes.map(({ key, position, texture }: CubeI) => (
+            {cubes.map(({ key, position, texture }) => (
                 <Box 
                     key={key} 
                     position={position} 
