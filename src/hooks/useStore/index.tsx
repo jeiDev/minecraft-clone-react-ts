@@ -1,10 +1,9 @@
 import create from "zustand"
 import { nanoid } from "nanoid"
-import { ObjectDynamicI } from "../../interfaces/common/global.interface"
-import { StoreI } from "./useStore.interface"
+import { StoreI, TextureType } from "./useStore.interface"
 
 export const useStore = create<StoreI>(set => ({
-    texture: "dirt",
+    texture: "glass",
     cubes: [],
     addCube: (x: number, y: number, z: number) => {
         set((prev) => ({    
@@ -26,7 +25,9 @@ export const useStore = create<StoreI>(set => ({
             })
         }))
     },
-    setTexture: () => {},
+    setTexture: (texture: TextureType) => {
+        set(() => ({ texture }))
+    },
     saveWorld: () => {},
     resetWorld: () => {}
 }))

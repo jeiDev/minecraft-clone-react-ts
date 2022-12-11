@@ -6,11 +6,11 @@ interface useKeyboardResponseI{
     moveLeft: boolean
     moveRight: boolean
     jump: boolean
-    texture1: boolean
-    texture2: boolean
-    texture3: boolean
-    texture4: boolean
-    texture5: boolean
+    dirtTexture: boolean
+    grassTexture: boolean
+    glassTexture: boolean
+    woodTexture: boolean
+    logTexture: boolean
 }
 
 function actionByKey(key: string): string | undefined {
@@ -20,11 +20,11 @@ function actionByKey(key: string): string | undefined {
         KeyA: "moveLeft",
         KeyD: "moveRight",
         Space: "jump",
-        Digit1: "dirt",
-        Digit2: "grass",
-        Digit3: "glass",
-        Digit4: "wood",
-        Digit5: "log"
+        Digit1: "dirtTexture",
+        Digit2: "grassTexture",
+        Digit3: "glassTexture",
+        Digit4: "woodTexture",
+        Digit5: "logTexture"
     }[key]
 }
 
@@ -35,16 +35,16 @@ export function useKeyboard(): useKeyboardResponseI {
         moveLeft: false,
         moveRight: false,
         jump: false,
-        texture1: false,
-        texture2: false,
-        texture3: false,
-        texture4: false,
-        texture5: false
+        dirtTexture: false,
+        grassTexture: false,
+        glassTexture: false,
+        woodTexture: false,
+        logTexture: false
     })
 
     const handleChangeAction = useCallback((code: string, status: boolean = false) => {
         const action = actionByKey(code)
-
+        console.log({action, code})
         if (action) {
             setActions((prev) => ({
                 ...prev,

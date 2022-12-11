@@ -13,7 +13,7 @@ export interface RemoveCubeStoreFunctionI{
 }
 
 export interface SetTextureStoreFunctionI{
-    (x: number, y: number, z: number): void
+    (texture: TextureType): void
 }
 
 export interface SaveWorldStoreFunctionI{
@@ -24,8 +24,19 @@ export interface ResetWorldStoreFunctionI{
     (x: number, y: number, z: number): void
 }
 
+export const TextureEnum = {
+    DIRT: "dirt",
+    GLASS: "glass",
+    GRASS: "grass",
+    LOG: "log",
+    WOOD: "wood",
+    GROUND: "ground"
+} as const
+
+export type TextureType = typeof TextureEnum[keyof typeof TextureEnum]
+
 export interface StoreI{
-    texture: string
+    texture: TextureType
     cubes: CubeStoreI[]
     addCube: AddCubeStoreFunctionI
     removeCube: RemoveCubeStoreFunctionI
