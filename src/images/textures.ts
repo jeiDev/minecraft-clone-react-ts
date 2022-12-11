@@ -1,4 +1,5 @@
-import { TextureLoader } from "three"
+import { NearestFilter, TextureLoader } from "three"
+import { ObjectDynamicI } from "../hooks/hook.interface"
 
 import { dirtImg, glassImg, grassImg, logImg, woodImg } from "./images"
 
@@ -9,7 +10,14 @@ const logTexture = new TextureLoader().load(logImg)
 const woodTexture = new TextureLoader().load(woodImg)
 const groundTexture = new TextureLoader().load(grassImg)
 
-export {
+dirtTexture.magFilter = NearestFilter
+glassTexture.magFilter = NearestFilter
+grassTexture.magFilter = NearestFilter
+logTexture.magFilter = NearestFilter
+woodTexture.magFilter = NearestFilter
+groundTexture.magFilter = NearestFilter
+
+const textures: ObjectDynamicI = {
     dirtTexture,
     glassTexture,
     grassTexture,
@@ -17,3 +25,5 @@ export {
     woodTexture,
     groundTexture
 }
+
+export default textures
