@@ -44,7 +44,6 @@ export function useKeyboard(): useKeyboardResponseI {
 
     const handleChangeAction = useCallback((code: string, status: boolean = false) => {
         const action = actionByKey(code)
-        console.log({action, code})
         if (action) {
             setActions((prev) => ({
                 ...prev,
