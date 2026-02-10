@@ -1,46 +1,169 @@
-# Getting Started with Create React App
+# ⛏️ Minecraft Clone - React TypeScript Edition
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+![Minecraft Clone](https://img.shields.io/badge/Made%20with-React%20%2B%20TypeScript%20%2B%20Three.js-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
 
-In the project directory, you can run:
+**Un clon interactivo del legendario juego Minecraft construido completamente con React, TypeScript y Three.js**
 
-### `npm start`
+[🎮 Características](#-características) • [⚙️ Tecnologías](#️-tecnologías-utilizadas) • [🚀 Inicio Rápido](#-inicio-rápido) • [📚 Documentación](#-estructura-del-proyecto)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</div>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🎮 Características
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✨ **Experiencia Inmersiva en Primera Persona (FPV)**
+- Movimiento suave en 3D con controles intuitivos
+- Vista en primera persona completamente funcional
 
-### `npm run build`
+🧱 **Sistema de Cubos Dinámico**
+- Generación de terreno basado en cubos
+- Texturas procedurales de Minecraft
+- Física interactiva con la escena 3D
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+⌨️ **Controles Avanzados**
+- Soporte completo de teclado (WASD para movimiento)
+- Sistema de gestión de estado global
+- Interpolación de movimiento fluida
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🎨 **Gráficos de Calidad**
+- Renderizado 3D con Three.js
+- Texturas auténticas de Minecraft
+- Iluminación y sombras realistas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚙️ Tecnologías Utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| Tecnología | Descripción |
+|------------|-------------|
+| **React** | Framework de interfaz de usuario |
+| **TypeScript** | Tipado estático para código seguro |
+| **Three.js** | Renderización 3D en el navegador |
+| **React Three Fiber** | Renderer de Three.js para React |
+| **Zustand** | Gestión de estado minimalista |
+| **SASS/CSS Modules** | Estilos componentizados |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🚀 Inicio Rápido
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Requisitos Previos
+- Node.js (v14 o superior)
+- npm o yarn
 
-## Learn More
+### Instalación
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# Clonar el repositorio
+git clone <tu-repositorio>
+cd minecraft-clone-react-ts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Instalar dependencias
+npm install
+```
+
+### Desarrollo
+
+```bash
+# Iniciar el servidor de desarrollo
+npm start
+```
+
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+### Producción
+
+```bash
+# Compilar para producción
+npm run build
+
+# El proyecto está listo para ser desplegado en la carpeta 'build'
+```
+
+---
+
+## 📚 Estructura del Proyecto
+
+```
+src/
+├── components/
+│   ├── FPV.tsx              # Componente principal de vista en primera persona
+│   ├── Ground.tsx           # Terreno base
+│   ├── Player.tsx           # Lógica del jugador
+│   ├── Control/             # Sistema de controles
+│   └── Cubes/               # Gestión de cubos (geometría 3D)
+├── hooks/
+│   ├── useKeyboard.tsx      # Hook personalizado para captura de teclado
+│   └── useStore/            # Gestión global de estado
+├── interfaces/
+│   └── common/              # Interfaces TypeScript compartidas
+├── images/
+│   ├── textures.ts          # Carga de texturas
+│   └── images.ts            # Manejo de imágenes
+└── styles/                  # Estilos CSS Modules
+```
+
+---
+
+## 🎓 Créditos y Referencias
+
+Este proyecto fue desarrollado basándose en y con la invaluable ayuda de:
+
+### 📺 Tutorial de freeCodeCamp.org
+- Plataforma: [freeCodeCamp.org](https://www.freecodecamp.org)
+- Video: [Build a 3D Game with React Three Fiber](https://www.youtube.com/watch?v=qpOZup_3P_A)
+
+**Agradecimiento especial** a los instructores de freeCodeCamp por proporcionar un tutorial completo y de alta calidad que hizo posible la creación de este increíble proyecto.
+
+---
+
+## 🎯 Cómo Jugar
+
+1. **Movimiento**: Usa las teclas **W, A, S, D** para moverte
+2. **Mirada**: Mueve el ratón para cambiar la dirección de la cámara
+3. **Interacción**: Explora el mundo 3D de Minecraft construido con React
+
+---
+
+## 🚧 Mejoras Futuras
+
+- [ ] Sistema de construcción y destrucción de bloques
+- [ ] Inventario de objetos
+- [ ] NPCs y animales
+- [ ] Generación procedural infinita
+- [ ] Modo multijugador
+- [ ] Sistema de física mejorado
+- [ ] Efectos de partículas
+
+---
+
+## 📝 Licencia
+
+Este proyecto está bajo la licencia MIT. Ver `LICENSE` para más detalles.
+
+---
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+---
+
+<div align="center">
+
+**Hecho con ❤️ en React + TypeScript**
+
+⭐ Si te gusta este proyecto, ¡no olvides darle una estrella!
+
+</div>
