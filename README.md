@@ -61,7 +61,7 @@
 
 ```bash
 # Clonar el repositorio
-git clone <tu-repositorio>
+git clone https://github.com/jeiDev/minecraft-clone-react-ts.git
 cd minecraft-clone-react-ts
 
 # Instalar dependencias
