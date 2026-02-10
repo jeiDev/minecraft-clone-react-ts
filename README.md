@@ -53,8 +53,9 @@
 ## 🚀 Inicio Rápido
 
 ### Requisitos Previos
-- Node.js (v14 o superior)
-- npm o yarn
+- **Node.js** v16.20.2 o superior (recomendado: v16.20.2)
+- **npm** v8.19.4 o superior (recomendado: v8.19.4)
+- yarn (opcional)
 
 ### Instalación
 
